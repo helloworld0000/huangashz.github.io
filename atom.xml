@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangashz.github.io/"/>
-  <updated>2016-08-22T06:17:02.000Z</updated>
+  <updated>2016-08-22T10:15:37.000Z</updated>
   <id>https://huangashz.github.io/</id>
   
   <author>
@@ -16,46 +16,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>updateWatchOS</title>
-    <link href="https://huangashz.github.io/2016/08/22/updateWatchOS/"/>
-    <id>https://huangashz.github.io/2016/08/22/updateWatchOS/</id>
-    <published>2016-08-22T06:13:49.000Z</published>
-    <updated>2016-08-22T06:17:02.000Z</updated>
+    <title>myfirstpost</title>
+    <link href="https://huangashz.github.io/2016/08/22/2016/08/22/myfirstpost/"/>
+    <id>https://huangashz.github.io/2016/08/22/2016/08/22/myfirstpost/</id>
+    <published>2016-08-22T09:55:20.000Z</published>
+    <updated>2016-08-22T10:15:37.000Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一篇测试feed的文章。</p>
+    <content type="html"><![CDATA[<p>欢迎来到我的个人技术Blog，这是我的第一篇文章，也算是一篇自我介绍吧。</p>
+<h2 id="Self-introduction"><a href="#Self-introduction" class="headerlink" title="Self-introduction"></a>Self-introduction</h2><h3 id="我是一个iOS程序猿"><a href="#我是一个iOS程序猿" class="headerlink" title="我是一个iOS程序猿"></a>我是一个iOS程序猿</h3><p>没错，我是一个iOS猿，供职于一家还算有点知名度的互联网公司，做着一个还算有点知名度的APP，平时喜欢喜欢逛逛技术贴，学习点新奇的（就是我不会的我不知道的）知识，对PHP，服务器搭建，JS等技术知识比较感兴趣。</p>
+<h3 id="我是一个LOLer"><a href="#我是一个LOLer" class="headerlink" title="我是一个LOLer"></a>我是一个LOLer</h3><p>业余时间呢，当然和大家一样喜欢打游戏，也就是LOL啦。。还有喜欢健身，听歌，看电影。</p>
+<h3 id="在哪里找到我？"><a href="#在哪里找到我？" class="headerlink" title="在哪里找到我？"></a>在哪里找到我？</h3><p><a href="http://weibo.com/2499422364/" target="_blank" rel="external">微博：@我不叫小花哥哥</a></p>
+<p><a href="http://www.ibananamilk.com/" target="_blank" rel="external">微信：huangashz</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这是一篇测试feed的文章。&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>iOS Crash 分析</title>
-    <link href="https://huangashz.github.io/2016/08/22/2016/08/22/082201/"/>
-    <id>https://huangashz.github.io/2016/08/22/2016/08/22/082201/</id>
-    <published>2016-08-22T05:51:43.000Z</published>
-    <updated>2016-08-22T05:51:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。</p>
-<h2 id="Crash-收集"><a href="#Crash-收集" class="headerlink" title="Crash 收集"></a>Crash 收集</h2><h3 id="当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一个-crash文件中，也就是我们常说的Crash日志。"><a href="#当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一个-crash文件中，也就是我们常说的Crash日志。" class="headerlink" title="当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一个.crash文件中，也就是我们常说的Crash日志。"></a>当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一个.crash文件中，也就是我们常说的Crash日志。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash
+      &lt;p&gt;欢迎来到我的个人技术Blog，这是我的第一篇文章，也算是一篇自我介绍吧。&lt;/p&gt;
+&lt;h2 id=&quot;Self-introduction&quot;&gt;&lt;a href=&quot;#Self-introduction&quot; class=&quot;headerlink&quot; title=&quot;Self-introduct
     
     </summary>
     
