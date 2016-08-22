@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangashz.github.io/"/>
-  <updated>2016-08-22T10:15:37.000Z</updated>
+  <updated>2016-08-22T10:18:22.000Z</updated>
   <id>https://huangashz.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>myfirstpost</title>
+    <title>开篇介绍</title>
     <link href="https://huangashz.github.io/2016/08/22/2016/08/22/myfirstpost/"/>
     <id>https://huangashz.github.io/2016/08/22/2016/08/22/myfirstpost/</id>
     <published>2016-08-22T09:55:20.000Z</published>
-    <updated>2016-08-22T10:15:37.000Z</updated>
+    <updated>2016-08-22T10:18:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到我的个人技术Blog，这是我的第一篇文章，也算是一篇自我介绍吧。</p>
 <h2 id="Self-introduction"><a href="#Self-introduction" class="headerlink" title="Self-introduction"></a>Self-introduction</h2><h3 id="我是一个iOS程序猿"><a href="#我是一个iOS程序猿" class="headerlink" title="我是一个iOS程序猿"></a>我是一个iOS程序猿</h3><p>没错，我是一个iOS猿，供职于一家还算有点知名度的互联网公司，做着一个还算有点知名度的APP，平时喜欢喜欢逛逛技术贴，学习点新奇的（就是我不会的我不知道的）知识，对PHP，服务器搭建，JS等技术知识比较感兴趣。</p>
