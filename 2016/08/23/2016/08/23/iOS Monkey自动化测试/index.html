@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>小花哥哥💭 &#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+</head>
+
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2016/08/23/2016/08/23/iOS Monkey自动化测试/"></a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">八月 23 2016</p>
+  </section>
+
+  <section class="article-entry">
+    <p>iOS Monkey自动化测试</p>
+<p>前言</p>
+<p>巴拉巴拉一些我们为什么要做自动化测试。。。。。</p>
+<p>我们先介绍一种非常简单的方法，先看看效果：</p>
+<p>1 打开Instrument，选择Automation</p>
+<p>2  Copy <a href="https://github.com/jonathanpenn/ui-auto-monkey/blob/master/UIAutoMonkey.js" target="_blank" rel="external">UIAutoMonkey.js</a> 中的全部脚本代码，粘贴到Script的编辑区内</p>
+<p>3 选择好你准备跑自动化测试的机器以及APP[真机和模拟器都可以]，点击最下面的play按钮，开启自动化脚本测试。</p>
+<p>好了，这时你应该可以看见你的应用自动跑起来了，但是这种方式执行的自动化脚本非常容易被打断，比如有跳出当前应用的操作，或者有过多的手动干预等等，这明显与我们自动化测试的初衷是不符合的，我们需要24小时Monkey测试APP，但是我们不能24小时都看着脚本是不是被打断停止了，去重启它。</p>
+<p>这里可能你也会想到，如果程序发生异常，我们如何导出Crash日志呢？后面会有介绍。</p>
+<p>我们再来介绍一种比较稳定的自动化测试方式：</p>
+
+  </section>
+</article>
+
+<footer class="app-footer">
+  <p>
+    原创文章
+    <a>
+      转载请注明来源
+    </a>
+  </p>
+</footer>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-2016/08/23/iOS Monkey自动化测试" data-title="" data-url="https://huangashz.github.io/2016/08/23/2016/08/23/iOS Monkey自动化测试/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'ibananamilk'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="/images/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> 小花哥哥💭 's Blog </p>
+      <p class="subtitle"> Keep working fast, keep your team working fast. </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="Eric_Hyz"
+  href="https://twitter.com/intent/tweet?text=iOS Monkey自动化测试</p>
+"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+
+
+  
+</main>
+
+</body>
+</html>

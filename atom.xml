@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangashz.github.io/"/>
-  <updated>2016-08-22T10:18:22.000Z</updated>
+  <updated>2016-08-23T06:57:44.000Z</updated>
   <id>https://huangashz.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://huangashz.github.io/2016/08/23/2016/08/23/iOS%20Monkey%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    <id>https://huangashz.github.io/2016/08/23/2016/08/23/iOS Monkey自动化测试/</id>
+    <published>2016-08-23T06:57:04.000Z</published>
+    <updated>2016-08-23T06:57:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>iOS Monkey自动化测试</p>
+<p>前言</p>
+<p>巴拉巴拉一些我们为什么要做自动化测试。。。。。</p>
+<p>我们先介绍一种非常简单的方法，先看看效果：</p>
+<p>1 打开Instrument，选择Automation</p>
+<p>2  Copy <a href="https://github.com/jonathanpenn/ui-auto-monkey/blob/master/UIAutoMonkey.js" target="_blank" rel="external">UIAutoMonkey.js</a> 中的全部脚本代码，粘贴到Script的编辑区内</p>
+<p>3 选择好你准备跑自动化测试的机器以及APP[真机和模拟器都可以]，点击最下面的play按钮，开启自动化脚本测试。</p>
+<p>好了，这时你应该可以看见你的应用自动跑起来了，但是这种方式执行的自动化脚本非常容易被打断，比如有跳出当前应用的操作，或者有过多的手动干预等等，这明显与我们自动化测试的初衷是不符合的，我们需要24小时Monkey测试APP，但是我们不能24小时都看着脚本是不是被打断停止了，去重启它。</p>
+<p>这里可能你也会想到，如果程序发生异常，我们如何导出Crash日志呢？后面会有介绍。</p>
+<p>我们再来介绍一种比较稳定的自动化测试方式：</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iOS Monkey自动化测试&lt;/p&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;p&gt;巴拉巴拉一些我们为什么要做自动化测试。。。。。&lt;/p&gt;
+&lt;p&gt;我们先介绍一种非常简单的方法，先看看效果：&lt;/p&gt;
+&lt;p&gt;1 打开Instrument，选择Automation&lt;/p&gt;
+&lt;p&gt;2  Copy &lt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>开篇介绍</title>
