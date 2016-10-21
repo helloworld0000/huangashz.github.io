@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangashz.github.io/"/>
-  <updated>2016-10-21T10:44:13.000Z</updated>
+  <updated>2016-10-21T10:46:18.000Z</updated>
   <id>https://huangashz.github.io/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>关于iOS设备唯一标识</title>
+    <title>关于设备唯一标识</title>
     <link href="https://huangashz.github.io/2016/10/21/2016/10/21/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86/"/>
     <id>https://huangashz.github.io/2016/10/21/2016/10/21/关于iOS设备唯一标识/</id>
     <published>2016-10-21T10:39:41.000Z</published>
-    <updated>2016-10-21T10:44:13.000Z</updated>
+    <updated>2016-10-21T10:46:18.000Z</updated>
     
-    <content type="html"><![CDATA[<p>#UDID (Unique Device Identifier)<br>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
+    <content type="html"><![CDATA[<p>###UDID (Unique Device Identifier)<br>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
 <pre><code>[UIDevice uniqueIdentifier];
 </code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。</p>
 <p>##MAC Address<br>到了iOS 6大家都使用MAC地址来作为设备唯一标识。用来表示互联网上每一个站点的标识符，采用十六进制数表示，共六个字节（48位）。其中，前三个字节是由IEEE的注册管理机构</p>
@@ -56,8 +56,8 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
     
     <summary type="html">
     
-      &lt;p&gt;#UDID (Unique Device Identifier)&lt;br&gt;iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[UIDevice uniqueIdentifier]
+      &lt;p&gt;###UDID (Unique Device Identifier)&lt;br&gt;iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[UIDevice uniqueIdentifie
     
     </summary>
     
