@@ -1,28 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>H.Ekko</title>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>关于iOS设备唯一标识 | H.Ekko💭 &#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+</head>
+
+<body>
+  <nav class="app-nav" style="position:fixed;top:0px;">
   
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="https://huangashz.github.io/"/>
-  <updated>2016-10-21T10:41:02.000Z</updated>
-  <id>https://huangashz.github.io/</id>
-  
-  <author>
-    <name>H.Ekko</name>
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>关于iOS设备唯一标识</title>
-    <link href="https://huangashz.github.io/2016/10/21/2016/10/21/%E5%85%B3%E4%BA%8EiOS%E8%AE%BE%E5%A4%87%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86/"/>
-    <id>https://huangashz.github.io/2016/10/21/2016/10/21/关于iOS设备唯一标识/</id>
-    <published>2016-10-21T10:39:41.000Z</published>
-    <updated>2016-10-21T10:41:02.000Z</updated>
+      <a href="/.">home</a>
     
-    <content type="html"><![CDATA[<p>##UDID (Unique Device Identifier)<br>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2016/10/21/2016/10/21/关于iOS设备唯一标识/">关于iOS设备唯一标识</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">十月 21 2016</p>
+  </section>
+
+  <section class="article-entry">
+    <p>##UDID (Unique Device Identifier)<br>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
 <pre><code>[UIDevice uniqueIdentifier];
 </code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。</p>
 <p>##MAC Address<br>到了iOS 6大家都使用MAC地址来作为设备唯一标识。用来表示互联网上每一个站点的标识符，采用十六进制数表示，共六个字节（48位）。其中，前三个字节是由IEEE的注册管理机构</p>
@@ -52,16 +67,93 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
 <p>每台iOS设备的OpenUDID是通过第一个带有OpenUDID SDK包的App生成，如果你完全删除全部带有OpenUDID SDK包的App（比如恢复系统等），那么OpenUDID会重新生成，而且和之前的值会不同，相当于新设备；</p>
 <p>优点是没有用到MAC地址；不同设备能够获取各自唯一的识别码，保证了唯一性，可以用于以往UDID的相关用途；从代码分析OpenUDID的获取，识别码获取方便并且保存谨慎。缺点是<strong>当将设备上所有使用了OpenUDID方案的应用程序删除，且设备关机重启，xcode彻底清除并重启，重装应用程序去获取OpenUDID，此时OpenUDID变化，与之前不一样了，所有OpenUDID应用卸载后，由UIPasteboard保存的数据即被清除，重装故会重新获取新的OpenUDID。</strong></p>
 <p>那么当因为用户干预或者恶意程序，致使UIPasteboard数据清除，从而导致OpenUDID被删除，重装也会获取新的OpenUDID。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##UDID (Unique Device Identifier)&lt;br&gt;iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[UIDevice uniqueIdentifier
-    
-    </summary>
-    
-    
-  </entry>
+
+  </section>
+</article>
+
+<footer class="app-footer">
+  <p>
+    原创文章
+    <a>
+      转载请注明来源
+    </a>
+  </p>
+</footer>
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-2016/10/21/关于iOS设备唯一标识" data-title="关于iOS设备唯一标识" data-url="https://huangashz.github.io/2016/10/21/2016/10/21/关于iOS设备唯一标识/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'ibananamilk'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+
+
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="/images/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> H.Ekko💭 's Blog </p>
+      <p class="subtitle"> Keep working fast, keep your team working fast. </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="Eric_Hyz"
+  href="https://twitter.com/intent/tweet?text=##UDID (Unique Devic"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+
+<footer class="app-footer">
+  <p>
+    <img src = "/images/footer.png"  width="100%">
+  </p>
+</footer>
+
+
   
-</feed>
+</main>
+
+</body>
+</html>
