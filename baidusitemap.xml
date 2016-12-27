@@ -3,26 +3,10 @@
 
 
     
-  <url>
-    <loc>https://huangashz.github.io/2016/10/21/%E5%85%B3%E4%BA%8E%E8%AE%BE%E5%A4%87%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86/</loc>
-    <lastmod>2016-12-27T07:26:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>关于设备唯一标识</title>
-        <pubTime>2016-10-21T10:39:41.000Z</pubTime>
-        
-        <tag>Testing</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://huangashz.github.io/2016/12/27/newpost-test/</loc>
-    <lastmod>2016-12-27T07:25:58.000Z</lastmod>
+    <lastmod>2016-12-27T07:28:58.000Z</lastmod>
     <data>
         <display>
         <title>这是一篇新的post</title>
@@ -34,6 +18,29 @@
          
          
            
+             
+              <breadCrumb title="categoriesTesting" url="https://huangashz.github.io/categories/categoriesTesting/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huangashz.github.io/2016/10/21/%E5%85%B3%E4%BA%8E%E8%AE%BE%E5%A4%87%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86/</loc>
+    <lastmod>2016-12-27T07:28:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于设备唯一标识</title>
+        <pubTime>2016-10-21T10:39:41.000Z</pubTime>
+        
+        <tag>Testing</tag>
+         
+         
+           
+             
+              <breadCrumb title="categoriesTesting" url="https://huangashz.github.io/categories/categoriesTesting/"/>
+          
         </display>
     </data>
     </url>
