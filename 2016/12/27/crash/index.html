@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习,iOS,objective-C,开发," />
 
 
 
@@ -88,12 +88,26 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="H.Ekko">
-<meta property="og:url" content="https://huangashz.github.io/index.html">
+<meta name="description" content="在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。
+
+1 Crash 收集当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS Crash分析">
+<meta property="og:url" content="https://huangashz.github.io/2016/12/27/crash/index.html">
 <meta property="og:site_name" content="H.Ekko">
+<meta property="og:description" content="在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。
+
+1 Crash 收集当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/869239-669e7c69096deaa2.png?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/869239-5de5cfee58b9d623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/869239-5448c84e59fa1e89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-12-27T12:54:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="H.Ekko">
+<meta name="twitter:title" content="iOS Crash分析">
+<meta name="twitter:description" content="在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。
+
+1 Crash 收集当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/869239-669e7c69096deaa2.png?imageMogr2/auto-orient/strip">
 
 
 
@@ -121,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://huangashz.github.io/"/>
+  <link rel="canonical" href="https://huangashz.github.io/2016/12/27/crash/"/>
 
 
 
 
 
-  <title> H.Ekko </title>
+  <title> iOS Crash分析 | H.Ekko </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -148,9 +162,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -231,9 +243,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,10 +278,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/12/27/crash/" itemprop="url">
-                  iOS Crash分析
-                </a>
+                iOS Crash分析
               
             
           </h1>
@@ -330,9 +339,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。</p>
 </blockquote>
 <h2 id="1-Crash-收集"><a href="#1-Crash-收集" class="headerlink" title="1 Crash 收集"></a>1 Crash 收集</h2><p>当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一个.crash文件中，也就是我们常说的Crash日志。</p>
@@ -464,306 +471,89 @@
 </li>
 </ul>
 
-          
-        
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
       
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://huangashz.github.io/2016/12/27/newpost-test/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="H.Ekko">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/logo.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="H.Ekko">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="H.Ekko" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/27/newpost-test/" itemprop="url">
-                  这是一篇新的post
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-27T14:45:41+08:00">
-                2016-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/27/newpost-test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/27/newpost-test/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>请我喝瓶可乐？</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/reward-weixin.jpg" alt="H.Ekko WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
-
-      
-        
-          <h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><pre><code>这是一篇有关于生活的post。
-</code></pre>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/27/newpost-test/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://huangashz.github.io/2016/10/21/UniqueIdentifier/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="H.Ekko">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/logo.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="H.Ekko">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="H.Ekko" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/21/UniqueIdentifier/" itemprop="url">
-                  iOS 关于设备唯一标识
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-21T18:39:41+08:00">
-                2016-10-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/10/21/UniqueIdentifier/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/21/UniqueIdentifier/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/reward-zhifubao.jpg" alt="H.Ekko Alipay"/>
+          <p>支付宝打赏</p>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
-<pre><code>[UIDevice uniqueIdentifier];
-</code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。<br>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/21/UniqueIdentifier/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
+  </div>
 
-    <div>
-      
-    </div>
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+            <a href="/tags/objective-C/" rel="tag"># objective-C</a>
+          
+            <a href="/tags/开发/" rel="tag"># 开发</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/27/newpost-test/" rel="next" title="这是一篇新的post">
+                <i class="fa fa-chevron-left"></i> 这是一篇新的post
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -771,6 +561,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/27/crash/"
+           data-title="iOS Crash分析" data-url="https://huangashz.github.io/2016/12/27/crash/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -790,8 +588,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.png"
@@ -867,6 +674,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Crash-收集"><span class="nav-number">1.</span> <span class="nav-text">1 Crash 收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Watchdog-timeout"><span class="nav-number">1.1.</span> <span class="nav-text">Watchdog timeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Crash-due-to-bugs"><span class="nav-number">1.2.</span> <span class="nav-text">Crash due to bugs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception-Type"><span class="nav-number">1.3.</span> <span class="nav-text">Exception Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception-Code"><span class="nav-number">1.4.</span> <span class="nav-text">Exception Code</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -956,6 +779,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
