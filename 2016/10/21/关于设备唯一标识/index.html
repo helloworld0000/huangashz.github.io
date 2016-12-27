@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>关于设备唯一标识 | H.Ekko💭 &#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/app.css">
-  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>关于设备唯一标识 | H.Ekko</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="H.Ekko">
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  
 </head>
 
-<body>
-  <nav class="app-nav" style="position:fixed;top:0px;">
-  
-    
-      <a href="/.">home</a>
-    
-  
-    
-      <a href="/archives">archive</a>
-    
-  
-    
-      <a href="/atom.xml">rss</a>
-    
-  
-</nav>
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
 
-  <main class="post">
-  <article>
-  <h1 class="article-title">
-    <a href="/2016/10/21/关于设备唯一标识/">关于设备唯一标识</a>
-  </h1>
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.jpg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">H.Ekko</h1>
+            <h2 class="blog-description"><button id="showMenu">Show Menu</button></h2>
+        </div>
+    </div>
+</header>
 
-  <section class="article-meta">
-    <p class="article-date">十月 21 2016</p>
-  </section>
+      
 
-  <section class="article-entry">
-    <h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2016-10-21T10:39:41.000Z" itemprop="datePublished">
+          2016-10-21
+      </time>
+    
+</span>
+    <h1 class="post-title">关于设备唯一标识</h1>
+    <section class="post-content">
+      <h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
 <pre><code>[UIDevice uniqueIdentifier];
 </code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。</p>
 <h2 id="MAC-Address"><a href="#MAC-Address" class="headerlink" title="MAC Address"></a>MAC Address</h2><p>  到了iOS 6大家都使用MAC地址来作为设备唯一标识。用来表示互联网上每一个站点的标识符，采用十六进制数表示，共六个字节（48位）。其中，前三个字节是由IEEE的注册管理机构</p>
@@ -65,92 +81,87 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
 <p>优点是没有用到MAC地址；不同设备能够获取各自唯一的识别码，保证了唯一性，可以用于以往UDID的相关用途；从代码分析OpenUDID的获取，识别码获取方便并且保存谨慎。缺点是<strong>当将设备上所有使用了OpenUDID方案的应用程序删除，且设备关机重启，xcode彻底清除并重启，重装应用程序去获取OpenUDID，此时OpenUDID变化，与之前不一样了，所有OpenUDID应用卸载后，由UIPasteboard保存的数据即被清除，重装故会重新获取新的OpenUDID。</strong></p>
 <p>那么当因为用户干预或者恶意程序，致使UIPasteboard数据清除，从而导致OpenUDID被删除，重装也会获取新的OpenUDID。</p>
 
-  </section>
-</article>
-
-<footer class="app-footer">
-  <p>
-    原创文章
-    <a>
-      转载请注明来源
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>H.Ekko</h4>
+    <p>喜欢涉猎各种好玩的东西。</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=喜欢涉猎各种好玩的东西。 ?url=https://huangashz.github.io/2016/10/21/关于设备唯一标识/" target="_blank">
+        <span class="hidden">weibo</span>
     </a>
-  </p>
-</footer>
+    <a class="icon-twitter" href="http://twitter.com/share?url=https://huangashz.github.io/2016/10/21/关于设备唯一标识/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://huangashz.github.io/2016/10/21/关于设备唯一标识/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://huangashz.github.io/2016/10/21/关于设备唯一标识/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
 
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="icon-logo">•</span>
+    
+</nav>
 
-  <section id="comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-关于设备唯一标识" data-title="关于设备唯一标识" data-url="https://huangashz.github.io/2016/10/21/关于设备唯一标识/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'ibananamilk'};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-    <!-- 多说公共JS代码 end -->
-  </section>
-
-
-
-  <div class="sharing grid">
-  <section class="profile grid-item grid">
-    <img class="avatar" src="/images/avatar.png" alt="avatar" />
-    <div class="grid-item">
-      <p class="title"> H.Ekko💭 's Blog </p>
-      <p class="subtitle"> Keep working fast, keep your team working fast. </p>
-    <div>
-  </section>
-
-  <section class="share-btns">
-    <!-- <p> share it if you like it~ </p> -->
-    <a
-  class="twitter-share-button"
-  data-size="large"
-  data-via="Eric_Hyz"
-  href="https://twitter.com/intent/tweet?text= id="UDID-Unique-Dev"
->
-  Tweet
-</a>
-
-<script>
-  window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  js.async = true;
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));
-</script>
-
-  </section>
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
 </div>
 
-<footer class="app-footer">
-  <p>
-    <img src = "/images/footer.png"  width="100%">
-  </p>
-</footer>
-
-
-  
 </main>
 
+
+      
+<footer class="site-footer">
+  
+  <a class="subscribe icon-feed" href="atom.xml"><span class="tooltip">Subscribe!</span></a>
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">H.Ekko</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/mytest.html"><span>Contact</span></a>
+
+</nav>
+
+</div>
 </body>
 </html>
