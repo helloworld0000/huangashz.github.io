@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangashz.github.io/"/>
-  <updated>2016-12-27T12:54:41.000Z</updated>
+  <updated>2016-12-27T12:55:56.000Z</updated>
   <id>https://huangashz.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://huangashz.github.io/2016/12/27/crash/"/>
     <id>https://huangashz.github.io/2016/12/27/crash/</id>
     <published>2016-12-27T12:23:54.000Z</published>
-    <updated>2016-12-27T12:54:41.000Z</updated>
+    <updated>2016-12-27T12:55:56.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。</p>
+<p>在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。<a id="more"></a></p>
 </blockquote>
 <h2 id="1-Crash-收集"><a href="#1-Crash-收集" class="headerlink" title="1 Crash 收集"></a>1 Crash 收集</h2><p>当程序运行发生Crash的时候，系统会把运行的最后时刻的程序运行记录保存下来，存储到一个.crash文件中，也就是我们常说的Crash日志。</p>
 <p>一、  在开发中，最常遇到的Crash就是Debug状态下了，此时我们是幸运的，因为这个bug我们自己最先知道，我们可以在别人发现它之前把它改好。而且，Xcode 会提供给我们最明确的Crash信息，直接定位到Crash 的那行代码，并会打印出Crash Reason 及调用栈信息。</p>
@@ -158,7 +158,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问
+&lt;p&gt;在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。
     
     </summary>
     
