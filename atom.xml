@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huangashz.github.io/"/>
-  <updated>2016-12-27T12:55:56.000Z</updated>
+  <updated>2016-12-28T04:05:42.000Z</updated>
   <id>https://huangashz.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://huangashz.github.io/2016/12/27/crash/"/>
     <id>https://huangashz.github.io/2016/12/27/crash/</id>
     <published>2016-12-27T12:23:54.000Z</published>
-    <updated>2016-12-27T12:55:56.000Z</updated>
+    <updated>2016-12-28T04:05:42.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。<a id="more"></a></p>
@@ -174,40 +174,18 @@
   </entry>
   
   <entry>
-    <title>这是一篇新的post</title>
-    <link href="https://huangashz.github.io/2016/12/27/newpost-test/"/>
-    <id>https://huangashz.github.io/2016/12/27/newpost-test/</id>
-    <published>2016-12-27T06:45:41.000Z</published>
-    <updated>2016-12-27T09:54:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><pre><code>这是一篇有关于生活的post。
-</code></pre><a id="more"></a>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;title&quot;&gt;&lt;a href=&quot;#title&quot; class=&quot;headerlink&quot; title=&quot;title&quot;&gt;&lt;/a&gt;title&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;这是一篇有关于生活的post。
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="Testing" scheme="https://huangashz.github.io/tags/Testing/"/>
-    
-      <category term="Another Tag" scheme="https://huangashz.github.io/tags/Another-Tag/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iOS 关于设备唯一标识</title>
     <link href="https://huangashz.github.io/2016/10/21/UniqueIdentifier/"/>
     <id>https://huangashz.github.io/2016/10/21/UniqueIdentifier/</id>
     <published>2016-10-21T10:39:41.000Z</published>
-    <updated>2016-12-27T12:26:16.000Z</updated>
+    <updated>2016-12-28T04:05:44.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>设备唯一标识，说白了其实是用来标识用户的，拿到了唯一标识注册到云端，云端给用户一个标识ID，代表了这是一个用户，也用来区分用户。那么这位用户即使不登录，我们也可为他/她做一些订制化的推荐等等工作。<a id="more"></a></p>
+</blockquote>
+<h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
 <pre><code>[UIDevice uniqueIdentifier];
-</code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。<br><a id="more"></a></p>
+</code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。<br><!-- more --></p>
 <h2 id="MAC-Address"><a href="#MAC-Address" class="headerlink" title="MAC Address"></a>MAC Address</h2><p>  到了iOS 6大家都使用MAC地址来作为设备唯一标识。用来表示互联网上每一个站点的标识符，采用十六进制数表示，共六个字节（48位）。其中，前三个字节是由IEEE的注册管理机构</p>
 <p>RA负责给不同厂家分配的代码(高位24位)，也称为“编制上唯一的标识符” （Organizationally Unique Identifier)，后三个字节(低位24位)由各厂家自行指派给生产的适配器接口，称为扩展标识符（唯一性）。</p>
 <p>MAC地址在网络上用来区分设备的唯一性，接入网络的设备都有一个MAC地址，他们肯定都是不同的，是唯一的。一部iPhone上可能有多个MAC地址，包括WIFI的、SIM的等，但是iTouch和iPad上就有一个WIFI的，因此只需获取WIFI的MAC地址就好了，也就是en0的地址。</p>
@@ -236,9 +214,8 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
     
     <summary type="html">
     
-      &lt;h2 id=&quot;UDID-Unique-Device-Identifier&quot;&gt;&lt;a href=&quot;#UDID-Unique-Device-Identifier&quot; class=&quot;headerlink&quot; title=&quot;UDID (Unique Device Identifier)&quot;&gt;&lt;/a&gt;UDID (Unique Device Identifier)&lt;/h2&gt;&lt;p&gt;iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[UIDevice uniqueIdentifier];
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到&lt;code&gt;-[UIDevice uniqueIdentifier]&lt;/code&gt;的App。&lt;br&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;设备唯一标识，说白了其实是用来标识用户的，拿到了唯一标识注册到云端，云端给用户一个标识ID，代表了这是一个用户，也用来区分用户。那么这位用户即使不登录，我们也可为他/她做一些订制化的推荐等等工作。
     
     </summary>
     

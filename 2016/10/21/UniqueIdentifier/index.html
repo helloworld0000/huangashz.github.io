@@ -88,22 +88,16 @@
 
 
 
-<meta name="description" content="UDID (Unique Device Identifier)iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。
-[UIDevice uniqueIdentifier];
-这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到-[UIDevice uniqueIdentif">
+<meta name="description" content="设备唯一标识，说白了其实是用来标识用户的，拿到了唯一标识注册到云端，云端给用户一个标识ID，代表了这是一个用户，也用来区分用户。那么这位用户即使不登录，我们也可为他/她做一些订制化的推荐等等工作。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 关于设备唯一标识">
 <meta property="og:url" content="https://huangashz.github.io/2016/10/21/UniqueIdentifier/index.html">
 <meta property="og:site_name" content="H.Ekko">
-<meta property="og:description" content="UDID (Unique Device Identifier)iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。
-[UIDevice uniqueIdentifier];
-这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到-[UIDevice uniqueIdentif">
-<meta property="og:updated_time" content="2016-12-27T12:26:16.000Z">
+<meta property="og:description" content="设备唯一标识，说白了其实是用来标识用户的，拿到了唯一标识注册到云端，云端给用户一个标识ID，代表了这是一个用户，也用来区分用户。那么这位用户即使不登录，我们也可为他/她做一些订制化的推荐等等工作。">
+<meta property="og:updated_time" content="2016-12-28T04:05:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 关于设备唯一标识">
-<meta name="twitter:description" content="UDID (Unique Device Identifier)iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。
-[UIDevice uniqueIdentifier];
-这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到-[UIDevice uniqueIdentif">
+<meta name="twitter:description" content="设备唯一标识，说白了其实是用来标识用户的，拿到了唯一标识注册到云端，云端给用户一个标识ID，代表了这是一个用户，也用来区分用户。那么这位用户即使不登录，我们也可为他/她做一些订制化的推荐等等工作。">
 
 
 
@@ -335,9 +329,12 @@
       
 
       
-        <h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
+        <blockquote>
+<p>设备唯一标识，说白了其实是用来标识用户的，拿到了唯一标识注册到云端，云端给用户一个标识ID，代表了这是一个用户，也用来区分用户。那么这位用户即使不登录，我们也可为他/她做一些订制化的推荐等等工作。<a id="more"></a></p>
+</blockquote>
+<h2 id="UDID-Unique-Device-Identifier"><a href="#UDID-Unique-Device-Identifier" class="headerlink" title="UDID (Unique Device Identifier)"></a>UDID (Unique Device Identifier)</h2><p>iOS 2.0以后UIDevice提供一个获取设备唯一标识符的方法uniqueIdentifier，也就是UDID。</p>
 <pre><code>[UIDevice uniqueIdentifier];
-</code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。<br><a id="more"></a></p>
+</code></pre><p>这个方法在iOS 5的时候已经被遗弃了，iOS 7中已经完全的禁用了它。Xcode5甚至不会允许你编译包含了指引到<code>-[UIDevice uniqueIdentifier]</code>的App。<br><!-- more --></p>
 <h2 id="MAC-Address"><a href="#MAC-Address" class="headerlink" title="MAC Address"></a>MAC Address</h2><p>  到了iOS 6大家都使用MAC地址来作为设备唯一标识。用来表示互联网上每一个站点的标识符，采用十六进制数表示，共六个字节（48位）。其中，前三个字节是由IEEE的注册管理机构</p>
 <p>RA负责给不同厂家分配的代码(高位24位)，也称为“编制上唯一的标识符” （Organizationally Unique Identifier)，后三个字节(低位24位)由各厂家自行指派给生产的适配器接口，称为扩展标识符（唯一性）。</p>
 <p>MAC地址在网络上用来区分设备的唯一性，接入网络的设备都有一个MAC地址，他们肯定都是不同的，是唯一的。一部iPhone上可能有多个MAC地址，包括WIFI的、SIM的等，但是iTouch和iPad上就有一个WIFI的，因此只需获取WIFI的MAC地址就好了，也就是en0的地址。</p>
@@ -427,8 +424,8 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/27/newpost-test/" rel="prev" title="这是一篇新的post">
-                这是一篇新的post <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/27/crash/" rel="prev" title="iOS Crash分析">
+                iOS Crash分析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -503,7 +500,7 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -514,7 +511,7 @@ NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UU
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
