@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/869239-669e7c69096deaa2.png?imageMogr2/auto-orient/strip">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/869239-5de5cfee58b9d623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/869239-5448c84e59fa1e89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-12-28T04:05:42.000Z">
+<meta property="og:updated_time" content="2016-12-28T04:08:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Crash分析">
 <meta name="twitter:description" content="在iOS开发中，Crash无疑是App的致命杀手。作为一个严谨的iOS 开发人员来说，写出优秀的健硕的无Crash代码至关重要。但是随着工程代码量的提升，功能的迭代，以及协作开发的模式，难免会有Crash的发生。在发生Crash时，我们应迅速定位问题，解决问题，将Crash几率降到最低。">
@@ -342,7 +342,7 @@
 <p>三、最难过的，无疑是自测没发现，测试童鞋也没发现，但是群众的眼睛的雪亮的，我们亲爱用户遇到了这个棘手的Crash，这极差的用户体验很有可能让用户粉转黑，怎么办？做一个Crash收集器势在必行！！！~</p>
 <p>  关于Crash收集的框架，已经有比较成熟的开源框架,<a href="https://github.com/kstenerud/KSCrash" target="_blank" rel="external">KSCrash</a>、<a href="https://github.com/kaler/CrashKit" target="_blank" rel="external">CrashKit</a>等，也有一些Crash统计产品，如<a href="http://try.crashlytics.com/" target="_blank" rel="external">Crashlytics</a>，<a href="https://www.hockeyapp.net/features/crashreports/" target="_blank" rel="external">Hockeyapp</a>，<a href="http://www.umeng.com/" target="_blank" rel="external">友盟</a>，<a href="https://bugly.qq.com/v2/" target="_blank" rel="external">Bugly</a>等等。</p>
 <p>当App发生Crash时要上传Crash日志，之后我们可以通过服务端自己的Crash收集器拿到Crash文件，或者借助第三方服务拿到Crash文件。</p>
-<p>##2 Crash 分析<br>拿到了Crash日志，我们该从何入手呢？</p>
+<h2 id="2-Crash-分析"><a href="#2-Crash-分析" class="headerlink" title="2 Crash 分析"></a>2 Crash 分析</h2><p>拿到了Crash日志，我们该从何入手呢？</p>
 <p>Crash日志会提供给我们很多信息，我们要在其中提取出来可以帮我们快速定位问题的信息。</p>
 <p>首先我们看到这几行信息，<br><img src="http://upload-images.jianshu.io/upload_images/869239-669e7c69096deaa2.png?imageMogr2/auto-orient/strip" alt="crash log"></p>
 <ul>
@@ -396,8 +396,7 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/869239-5448c84e59fa1e89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="crash line"></p>
 <p>就能够定位到具体是代码的哪一行发生了问题。</p>
 <p><a href="http://wufawei.com/2014/03/symbolicating-ios-crash-logs/" target="_blank" rel="external">更多符号化crash文件的方法</a>。</p>
-<p>##3 Crash 处理</p>
-<blockquote>
+<h2 id="3-Crash-处理"><a href="#3-Crash-处理" class="headerlink" title="3 Crash 处理"></a>3 Crash 处理</h2><blockquote>
 <h3 id="Watchdog-timeout"><a href="#Watchdog-timeout" class="headerlink" title="Watchdog timeout"></a>Watchdog timeout</h3></blockquote>
 <p><code>Exception Code：0x8badf00d</code></p>
 <p>可以读作“eat bad food”，我吃了坏东西，不能继续为你工作了。是不是很形象？</p>
@@ -406,13 +405,11 @@
 <p>通常系统允许一个App从启动到可以相应用户事件的时间最多为5S，如果超过了5S，App就会被系统终止掉。在Launch，resume，suspend，quit时都会有相应的时间要求。在Highlight Thread里面我们可以看到被终止时调用到的位置，xxxAppDelegate加上行号。</p>
 <p>PS. 在连接Xcode调试时为了便于调试，系统会暂时禁用掉Watchdog，所以此类问题的发现需要使用正常的启动模式。</p>
 <blockquote>
-<p>###用户强制退出</p>
-</blockquote>
+<h3 id="用户强制退出"><a href="#用户强制退出" class="headerlink" title="用户强制退出"></a>用户强制退出</h3></blockquote>
 <p><code>Exception Codes: 0xdeadfa11, deadfall</code></p>
 <p>与正常退出杀死App不同，这种情况可能是用户强制关机或系统强制关机等造成。</p>
 <blockquote>
-<p>###低内存闪退</p>
-</blockquote>
+<h3 id="低内存闪退"><a href="#低内存闪退" class="headerlink" title="低内存闪退"></a>低内存闪退</h3></blockquote>
 <p>当系统发生低内存闪退时，很有可能我们拿不到任何的Crash信息日志，但App的的确确是闪退了。好好做下检讨吧，是不是哪里有内存泄露？用工具好好测试下。</p>
 <p>如果我们能够拿到日志，会发现它和一般的Crash日志不太一样，通常有<code>Free pages</code>，<code>Wired Pages</code>，<code>Purgeable pages</code>，<code>largest process</code> 组成，同时会列出当前系统调用栈信息。</p>
 <p>如果我们用的是<code>MRC</code>，首先静态分析一下，是不是哪里忘记了<code>release</code> ？ <code>dealloc</code> 写的是否正确？ 然后使用Instruments检查下内存使用情况，看看哪里的内存占用较高？是否内存泄露？通常大量的图片不能及时释放内存空间的时候会使内存占用飚升。</p>
@@ -678,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Crash-收集"><span class="nav-number">1.</span> <span class="nav-text">1 Crash 收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Watchdog-timeout"><span class="nav-number">1.1.</span> <span class="nav-text">Watchdog timeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Crash-due-to-bugs"><span class="nav-number">1.2.</span> <span class="nav-text">Crash due to bugs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception-Type"><span class="nav-number">1.3.</span> <span class="nav-text">Exception Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception-Code"><span class="nav-number">1.4.</span> <span class="nav-text">Exception Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Crash-收集"><span class="nav-number">1.</span> <span class="nav-text">1 Crash 收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Crash-分析"><span class="nav-number">2.</span> <span class="nav-text">2 Crash 分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Crash-处理"><span class="nav-number">3.</span> <span class="nav-text">3 Crash 处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Watchdog-timeout"><span class="nav-number">3.1.</span> <span class="nav-text">Watchdog timeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户强制退出"><span class="nav-number">3.2.</span> <span class="nav-text">用户强制退出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#低内存闪退"><span class="nav-number">3.3.</span> <span class="nav-text">低内存闪退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Crash-due-to-bugs"><span class="nav-number">3.4.</span> <span class="nav-text">Crash due to bugs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception-Type"><span class="nav-number">3.5.</span> <span class="nav-text">Exception Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exception-Code"><span class="nav-number">3.6.</span> <span class="nav-text">Exception Code</span></a></li></ol></li></ol></div>
             
 
           </div>
